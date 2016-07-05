@@ -1,0 +1,2 @@
+#!/bin/bash
+java -jar ##PREFIX##/mash-assembly-0.0.2.jar
