@@ -10,7 +10,7 @@ class Mash < Formula
   bottle :unneeded
 
   def install
-      (bin/"sbt").write <<-EOS.undent
+      (bin/"mash").write <<-EOS.undent
         #!/bin/sh
         java -jar #{prefix}/mash-assembly-0.0.2.jar
       EOS
