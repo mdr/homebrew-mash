@@ -1,9 +1,9 @@
 class Mash < Formula
   desc "An object shell for Unix"
   homepage "http://mash-shell.org"
-  url "https://github.com/mdr/mash/releases/download/v0.0.8/mash-0.0.8.jar"
-  version "0.0.8
-  sha256 "sha"
+  url "https://github.com/mdr/mash/releases/download/v$VERSION/mash-$VERSION.jar"
+  version "$VERSION
+  sha256 "$SHA"
   depends_on :java => "1.7+"
 
   bottle :unneeded
@@ -11,8 +11,8 @@ class Mash < Formula
   def install
       (bin/"mash").write <<-EOS.undent
         #!/bin/sh
-        java -jar #{prefix}/mash-0.0.8.jar
+        java -jar #{prefix}/mash-$VERSION.jar
       EOS
-      prefix.install "mash-0.0.8.jar"
+      prefix.install "mash-$VERSION.jar"
   end
 end
